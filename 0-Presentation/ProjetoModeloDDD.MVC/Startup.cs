@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using ProjetoModeloDDD.Infra.Data.Context;
+using ProjetoModeloDDD.MVC.AutoMapper;
 
 namespace ProjetoModeloDDD.MVC
 {
@@ -24,6 +26,10 @@ namespace ProjetoModeloDDD.MVC
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ProjetoModeloContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
+            //Mapper.Initialize(cfg => cfg.AddProfile<AutoMapperProfile>());
+
+            services.AddAutoMapper();
             services.AddMvc();
         }
 

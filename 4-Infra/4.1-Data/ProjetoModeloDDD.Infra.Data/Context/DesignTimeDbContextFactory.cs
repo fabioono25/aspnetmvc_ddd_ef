@@ -9,13 +9,13 @@ namespace ProjetoModeloDDD.Infra.Data.Context
     // {
     //     public ProjetoModeloContext CreateDbContext(string[] args)
     //     {
-    //         IConfigurationRoot configuration = new ConfigurationBuilder()
-    //             .SetBasePath(Directory.GetCurrentDirectory())
-    //             .AddJsonFile("appsettings.json")
-    //             .Build();
+    //         // IConfigurationRoot configuration = new ConfigurationBuilder()
+    //         //     .SetBasePath(Directory.GetCurrentDirectory())
+    //         //     .AddJsonFile("appsettings.json")
+    //         //     .Build();
     //         var builder = new DbContextOptionsBuilder<ProjetoModeloContext>();
-    //         var connectionString = configuration.GetConnectionString("DefaultConnection");
-    //         builder.UseSqlServer(connectionString);
+    //         // var connectionString = configuration.GetConnectionString("DefaultConnection");
+    //         // builder.UseSqlServer(connectionString);
     //         return new ProjetoModeloContext(builder.Options);
     //     }
     // }

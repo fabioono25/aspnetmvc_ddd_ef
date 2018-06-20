@@ -20,7 +20,6 @@ namespace ProjetoModeloDDD.Infra.Data.EntityConfig
 
             builder.Property(c => c.Email)
                 .IsRequired();
-
         }
     }
 }

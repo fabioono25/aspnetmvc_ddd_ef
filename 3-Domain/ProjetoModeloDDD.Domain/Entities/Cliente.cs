@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace ProjetoModeloDDD.Domain.Entities
 {
@@ -11,6 +12,8 @@ namespace ProjetoModeloDDD.Domain.Entities
         public string Email { get; set; }
         public DateTime DataCadastro { get; set; }
         public bool Ativo {get; set;}
+
+        public IEnumerable<Produto> Produtos { get; set; }
 
         //ativo e com 5 anos de cadastro
         public bool ClienteEspecial(Cliente cliente)        
