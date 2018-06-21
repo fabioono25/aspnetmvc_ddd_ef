@@ -14,25 +14,9 @@ namespace ProjetoModeloDDD.MVC.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ClienteRepository _clienteRepository = new ClienteRepository();
-
         public IActionResult Index()
         {
-            var clienteViewModel = Mapper.Map<IEnumerable<Cliente>, IEnumerable<ClienteViewModel>>(_clienteRepository.GetAll());
-            return View(clienteViewModel);
-        }
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create(ClienteViewModel cliente){
-            
-            if (!ModelState.IsValid)
-                return View(cliente);
-
-            var clienteDomain = Mapper.Map<ClienteViewModel, Cliente>(cliente);
-            _clienteRepository.Add(clienteDomain);
-
-            return RedirectToAction("Index");
+            return View();
         }
 
         public IActionResult About()

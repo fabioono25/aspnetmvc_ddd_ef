@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using ProjetoModeloDDD.Domain.Entities;
 using System;
 using Microsoft.Extensions.Configuration;
+using System.IO;
 
 namespace ProjetoModeloDDD.Infra.Data.Context
 {
@@ -34,6 +35,14 @@ namespace ProjetoModeloDDD.Infra.Data.Context
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+            var config = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("appsettings.json")
+                .Build();
+
+            optionsBuilder.UseSqlServer(config.GetConnectionString("DefaultConnection"));
+                
+
             // base.OnConfiguring(optionsBuilder);
             // var builder = new ConfigurationBuilder().AddConfiguration()
             //     .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
