@@ -1,5 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
 using ProjetoModeloDDD.Domain.Entities;
+
 
 namespace ProjetoModeloDDD.Application.Interfaces
 {

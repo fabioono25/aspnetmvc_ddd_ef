@@ -63,7 +63,7 @@ namespace ProjetoModeloDDD.MVC.Controllers
 
                 //return RedirectToAction(nameof(Index));
             }
-            catch (Exception ex)
+            catch
             {
                 return View();
             }

@@ -13,8 +13,12 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using ProjetoModeloDDD.Application;
 using ProjetoModeloDDD.Application.Interfaces;
+using ProjetoModeloDDD.Domain.Entities;
+using ProjetoModeloDDD.Domain.Interfaces.Repositories;
+using ProjetoModeloDDD.Domain.Interfaces.Services;
 using ProjetoModeloDDD.Domain.Services;
 using ProjetoModeloDDD.Infra.Data.Context;
+using ProjetoModeloDDD.Infra.Data.Repositories;
 using ProjetoModeloDDD.MVC.AutoMapper;
 using SimpleInjector;
 using SimpleInjector.Integration.AspNetCore.Mvc;
@@ -97,7 +101,19 @@ namespace ProjetoModeloDDD.MVC
             container.RegisterMvcViewComponents(app);
 
             //add application services. For instance
-            //container.Register<IClienteAppService, ClienteService>(Lifestyle.Scoped);
+            container.Register(typeof(IAppServiceBase<>), typeof(AppServiceBase<>).Assembly, Lifestyle.Scoped);
+            container.Register<IClienteAppService, ClienteAppService>(Lifestyle.Scoped);
+            container.Register<IProdutoAppService, ProdutoAppService>(Lifestyle.Scoped);
+
+            container.Register(typeof(IServiceBase<>), typeof(ServiceBase<>).Assembly, Lifestyle.Scoped);
+            container.Register<IClienteService, ClienteService>(Lifestyle.Scoped);
+            container.Register<IProdutoService, ProdutoService>(Lifestyle.Scoped);
+
+            // container.Register<IRepositoryBase<Cliente>, RepositoryBase<Cliente>>(Lifestyle.Scoped);
+            // container.Register<IRepositoryBase<Produto>, RepositoryBase<Produto>>(Lifestyle.Scoped);
+            container.Register(typeof(IRepositoryBase<>), typeof(RepositoryBase<>).Assembly, Lifestyle.Scoped);
+            container.Register<IClienteRepository, ClienteRepository>(Lifestyle.Scoped);
+            container.Register<IProdutoRepository, ProdutoRepository>(Lifestyle.Scoped);
             //container.Register<IProdutoAppService, ProdutoService>(Lifestyle.Scoped);
 
             //allow Simple Injector to resolve services from ASP.NET Core
