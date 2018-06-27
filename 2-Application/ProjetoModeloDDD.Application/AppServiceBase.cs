@@ -1,16 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using ProjetoModeloDDD.Application.Interfaces;
+using ProjetoModeloDDD.Domain.Interfaces.Services;
 
 namespace ProjetoModeloDDD.Application
 {
     public class AppServiceBase<TEntity> : IDisposable, IAppServiceBase<TEntity> where TEntity : class
     {
         //aplicando injecao de dependencia
-        private readonly IAppServiceBase<TEntity> _serviceBase;
+        private readonly IServiceBase<TEntity> _serviceBase;
 
-        public AppServiceBase(IAppServiceBase<TEntity> serviceBase)
+        public AppServiceBase(IServiceBase<TEntity> serviceBase)
         {
             _serviceBase = serviceBase;
         }
