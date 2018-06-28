@@ -1,10 +1,14 @@
-#Sobre
+# Sobre
 
 Este projeto foi inspirado no vídeo do Eduardo Pires sobre DDD, IoC, Automapper. [https://www.youtube.com/watch?v=i9Il79a2uBU](https://www.youtube.com/watch?v=i9Il79a2uBU)
 
 Como principais atualizações, temos a adoção do .NET Core Simple Injector.
 
-###Tecnologias
+## Modelo DDD
+
+![](https://github.com/fabioono25/aspnetmvc_ddd_ef/blob/master/ddd.jpg)
+
+### Tecnologias
 
 - DDD;
 - Repositório Genérico e Especializado;
@@ -14,7 +18,7 @@ Como principais atualizações, temos a adoção do .NET Core Simple Injector.
 - ASP.NET MVC Core 2.0
 - .NET Standard 2.0
 
-###Melhorias Necessárias
+### Melhorias Necessárias
 
 - Refactoring do código;
 - Utilização de programação funcional em pontos determinados da aplicação
