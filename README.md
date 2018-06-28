@@ -1,6 +1,6 @@
 # Sobre
 
-Este projeto foi inspirado no vídeo do Eduardo Pires sobre DDD, IoC, Automapper. [](http://www.eduardopires.net.br/2014/10/tutorial-asp-net-mvc-5-ddd-ef-automapper-ioc-dicas-e-truques/)
+Este projeto foi inspirado no vídeo do Eduardo Pires sobre DDD, IoC, Automapper. [Link](http://www.eduardopires.net.br/2014/10/tutorial-asp-net-mvc-5-ddd-ef-automapper-ioc-dicas-e-truques/)
 
 Como principais atualizações, temos a adoção do .NET Core Simple Injector.
 
