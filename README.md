@@ -14,7 +14,8 @@ Como principais atualizações, temos a adoção do .NET Core Simple Injector.
 - Repositório Genérico e Especializado;
 - Migrations/Code-First;
 - FluentAPI;
-- Automapper, utilizando SimpleInjector;
+- Automapper
+- IoC e DI, utilizando SimpleInjector;
 - ASP.NET MVC Core 2.0
 - .NET Standard 2.0
 
