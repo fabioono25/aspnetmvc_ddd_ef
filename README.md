@@ -6,7 +6,7 @@ Como principais atualizações, temos a adoção do .NET Core Simple Injector.
 
 ## Modelo DDD
 
-![](https://github.com/fabioono25/aspnetmvc_ddd_ef/blob/master/ddd.jpg)
+![](https://github.com/fabioono25/aspnetmvc_ddd_ef/blob/master/ddd1.jpg)
 
 ### Tecnologias
 
