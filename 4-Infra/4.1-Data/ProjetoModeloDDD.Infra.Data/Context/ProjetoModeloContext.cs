@@ -1,8 +1,5 @@
-using System.Linq;
-using System.Reflection;
 using Microsoft.EntityFrameworkCore;
 using ProjetoModeloDDD.Domain.Entities;
-using System;
 using Microsoft.Extensions.Configuration;
 using System.IO;
 

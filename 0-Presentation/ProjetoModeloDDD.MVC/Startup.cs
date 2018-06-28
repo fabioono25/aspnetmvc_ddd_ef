@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using AutoMapper;
+﻿using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -13,13 +9,11 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using ProjetoModeloDDD.Application;
 using ProjetoModeloDDD.Application.Interfaces;
-using ProjetoModeloDDD.Domain.Entities;
 using ProjetoModeloDDD.Domain.Interfaces.Repositories;
 using ProjetoModeloDDD.Domain.Interfaces.Services;
 using ProjetoModeloDDD.Domain.Services;
 using ProjetoModeloDDD.Infra.Data.Context;
 using ProjetoModeloDDD.Infra.Data.Repositories;
-using ProjetoModeloDDD.MVC.AutoMapper;
 using SimpleInjector;
 using SimpleInjector.Integration.AspNetCore.Mvc;
 using SimpleInjector.Lifestyles;
@@ -109,12 +103,9 @@ namespace ProjetoModeloDDD.MVC
             container.Register<IClienteService, ClienteService>(Lifestyle.Scoped);
             container.Register<IProdutoService, ProdutoService>(Lifestyle.Scoped);
 
-            // container.Register<IRepositoryBase<Cliente>, RepositoryBase<Cliente>>(Lifestyle.Scoped);
-            // container.Register<IRepositoryBase<Produto>, RepositoryBase<Produto>>(Lifestyle.Scoped);
             container.Register(typeof(IRepositoryBase<>), typeof(RepositoryBase<>).Assembly, Lifestyle.Scoped);
             container.Register<IClienteRepository, ClienteRepository>(Lifestyle.Scoped);
             container.Register<IProdutoRepository, ProdutoRepository>(Lifestyle.Scoped);
-            //container.Register<IProdutoAppService, ProdutoService>(Lifestyle.Scoped);
 
             //allow Simple Injector to resolve services from ASP.NET Core
             container.AutoCrossWireAspNetComponents(app);

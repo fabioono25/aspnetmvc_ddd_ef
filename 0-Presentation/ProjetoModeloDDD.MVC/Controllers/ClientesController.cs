@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using AutoMapper;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ProjetoModeloDDD.Application.Interfaces;
 using ProjetoModeloDDD.Domain.Entities;
-//using ProjetoModeloDDD.Infra.Data.Repositories;
 using ProjetoModeloDDD.MVC.ViewModels;
 
 namespace ProjetoModeloDDD.MVC.Controllers

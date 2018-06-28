@@ -1,13 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
-using AutoMapper;
+﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using ProjetoModeloDDD.Domain.Entities;
 using ProjetoModeloDDD.MVC.Models;
-using ProjetoModeloDDD.MVC.ViewModels;
 
 namespace ProjetoModeloDDD.MVC.Controllers
 {
