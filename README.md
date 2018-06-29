@@ -23,6 +23,7 @@ Como principais atualizações, temos a adoção do .NET Core Simple Injector.
 
 - Refactoring do código;
 - Utilização de programação funcional em pontos determinados da aplicação
+- Projeto de Testes Unitários
 - Retirar dependência da camada de repositório do projeto MVC
 - Utilização do FluentValidation para a validação das entidades de domínio
 - Correção/refactoring dos Produtos
